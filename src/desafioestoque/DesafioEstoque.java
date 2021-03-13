@@ -3,21 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package controleestoque;
-
-import dao.ProdutoDAO;
-import java.sql.SQLException;
-import java.util.ArrayList;
+package desafioestoque;
 import java.util.Scanner;
-import modelo.ModelTable;
-import modelo.Produto;
+
 
 /**
  *
- * @author upper
+ * @author Escola
  */
-public class main {
-    
+public class DesafioEstoque {
+
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
         Boolean breakLoop = false;
         Scanner scan = new Scanner(System.in);
@@ -28,5 +26,4 @@ public class main {
             scan.nextLine();
         }
     }
-    
 }

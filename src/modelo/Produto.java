@@ -23,11 +23,10 @@ public class Produto {
     private String valor_pago;
     private String valor_margem;
     private String preco_sugerido;
-    private String[] colunas = new String[]{"codigo", "data_entrada", "local_compra", "tipo", 
-        "marca", "caracteristicas", "tamanho", "cor", "valor_etiqueta", "valor_pago", "valor_margem", 
+    private String[] colunas = new String[]{"codigo", "data_entrada", "local_compra", "tipo",
+        "marca", "caracteristicas", "tamanho", "cor", "valor_etiqueta", "valor_pago", "valor_margem",
         "preco_sugerido"};
-    
-    
+
     public Produto(String codigo) {
         this.codigo = codigo;
     }
@@ -136,5 +135,27 @@ public class Produto {
     public void setColunas(String[] Colunas) {
         this.colunas = Colunas;
     }
-    
+
+    public void imprimirProduto() {
+        System.out.printf("Código: %d | Data de Entrada: %d | Local da Compra: %d | Tipo: %d | Marca: %d | Caracteristicas: %d | Tamanho: %d | Cor: %d | Valor Etiqueta: %d | Valor Pago: %d | Valor Margem: %d | Pre;o Sugerido: %d", new Object[]{
+            getCodigo(),
+            getDtEntrada(),
+            getLocalCompra(),
+            getTipo(),
+            getMarca(),
+            getCaracteristicas(),
+            getTamanho(),
+            getCor(),
+            getValorEtiqueta(),
+            getValorPago(),
+            getValorMargem(),
+            getPrecoSugerido()});
+    }
+
+    public String produtoParaString() {
+
+        String[] texto = {getCodigo(), getDtEntrada(), getLocalCompra(), getTipo(), getMarca(), getCaracteristicas(), getTamanho(), getCor(), getValorEtiqueta(), getValorPago(), getValorMargem(), getPrecoSugerido(), "\n"};
+        return String.join(",", texto);
+    }
+
 }
